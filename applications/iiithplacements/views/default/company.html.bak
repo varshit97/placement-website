@@ -1,0 +1,36 @@
+<link href="{{=URL('static','css/div.css')}}" rel="stylesheet" type="text/css">
+
+<div style="height:284px;width:1700px;background-color:#151515">
+    <table>
+        <tr>
+            <td><img src="/Placements/static/images/image9.jpg" alt="Image not available" height="440" width="420"></td>
+            <td><img src="/Placements/static/images/image6.gif" alt="Image not available" height="500" width="490"></td>
+            <td><img src="/Placements/static/images/image10.jpg" alt="Image not available" height="400" width="420"></td>
+        </tr>
+    </table>
+</div>
+
+{{extend 'layout.html'}}
+
+<style>
+table, th, td {
+    border: 3px solid black;
+}
+</style>
+
+<table style="width:90%">
+    <tr>
+        <th>Name of Company</th>
+        <th>E-mail</th>
+        <th>Send a message</th>
+    </tr>
+    {{for i in w:}}
+        {{name=i.Name_of_company}}
+        <tr>
+            <td>{{=i.Name_of_company}}</td>
+            <td>{{=i.e_mail}}</td>
+            <td><form action="{{=URL('message_to_student',args=[name])}}">
+            <input type="submit" value="send a message"></form></td>
+        </tr>
+    {{pass}}
+</table>

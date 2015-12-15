@@ -1,0 +1,51 @@
+<link href="{{=URL('static','css/div.css')}}" rel="stylesheet" type="text/css">
+
+<div style="height:284px;width:1360px;background-color:#151515">
+    <table>
+        <tr>
+            <td><img src="/Placements/static/images/image9.jpg" alt="Image not available" height="440" width="420"></td>
+            <td><img src="/Placements/static/images/image6.gif" alt="Image not available" height="500" width="490"></td>
+            <td><img src="/Placements/static/images/image10.jpg" alt="Image not available" height="400" width="420"></td>
+        </tr>
+    </table>
+</div>
+
+{{extend 'layout.html'}}
+
+<div class="well">
+<font size="4"><font size="5">Name : </font>{{=info3.student_name}}</font>
+<br>
+<font size="5" style="float:right;margin-right:160px">Profile picture of {{=x}} :</font>
+<br>
+<br>
+{{s=info3.profile_picture}}
+<img style="height:300px;width:400px;float:right;margin-right:125px" src="{{=URL('download',args=s)}}" alt=""/>
+<br>
+<font size="4"><font size="5">Father's name : </font>{{=info3.father_name}}</font>
+<br>
+<br>
+<font size="4"><font size="5">Mother's name : </font>{{=info3.mother_name}}</font>
+<br>
+<br>
+<font size="4"><font size="5">E-mail : </font>{{=info3.e_mail}}</font>
+<br>
+<br>
+<font size="4"><font size="5">Phone number : </font>{{=info3.phone_number}}</font>
+<br>
+<br>
+<font size="4"><font size="5">Coding skills : </font>{{=info3.coding_skills}}</font>
+<br>
+<br>
+{{x=info3.academic_qualification}}
+<font size="5">Academic Qualifications : </font>
+<br>
+<br>
+{{for i in x:}}
+    <font size="4">{{=i}}</font>
+    <br>
+    <br>
+{{pass}}
+<br>
+<br>
+<font size="4"><font size="5">Other Interests : </font>{{=info3.other_interests}}</font>
+</div>

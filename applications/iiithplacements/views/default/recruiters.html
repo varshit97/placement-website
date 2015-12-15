@@ -1,0 +1,57 @@
+<link href="{{=URL('static','css/div.css')}}" rel="stylesheet" type="text/css">
+
+<div style="height:330px;width:1536px;background-color:#151515">
+    <table>
+        <tr>
+            <td><img src="/iiithplacements/static/images/image9.jpg" alt="Image not available" height="440" width="490"></td>
+            <td><img src="/iiithplacements/static/images/image6.gif" alt="Image not available" height="500" width="530"></td>
+            <td><img src="/iiithplacements/static/images/image10.jpg" alt="Image not available" height="400" width="490"></td>
+        </tr>
+    </table>
+</div>
+
+{{extend 'layout.html'}}
+
+<h3>
+    Search By Alphabet:
+</h3>
+
+<form action="{{=URL('recruiters1')}}">
+    <select name="alphabet">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="E">E</option>
+        <option value="F">F</option>
+        <option value="G">G</option>
+        <option value="H">H</option>
+        <option value="I">I</option>
+        <option value="J">J</option>
+        <option value="K">K</option>
+        <option value="L">L</option>
+        <option value="M">M</option>
+        <option value="N">N</option>
+        <option value="O">O</option>
+        <option value="P">P</option>
+        <option value="Q">Q</option>
+        <option value="R">R</option>
+        <option value="S">S</option>
+        <option value="T">T</option>
+        <option value="U">U</option>
+        <option value="V">V</option>
+        <option value="W">W</option>
+        <option value="X">X</option>
+        <option value="Y">Y</option>
+        <option value="Z">Z</option>
+    </select>
+    <br>
+    <input type='submit' value="Submit">
+</form>
+
+<form action="{{=URL('total')}}">
+    <h3>
+        Click to see all the Companies:
+    </h3>
+    <input type='submit' value="Submit">
+</form>

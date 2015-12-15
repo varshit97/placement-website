@@ -1,0 +1,24 @@
+<link href="{{=URL('static','css/div.css')}}" rel="stylesheet" type="text/css">
+
+<div id="div1">
+    <table>
+        <tr>
+            <td><img src="/Placements/static/images/image9.jpg" alt="Image not available" height="450" width="454"></td>
+            <td><img src="/Placements/static/images/image6.gif" alt="Image not available" height="500" width="570" ></td>
+            <td><img src="/Placements/static/images/image10.jpg" alt="Image not available" height="400" width="480" ></td>
+        </tr>
+    </table>
+</div>
+
+{{extend 'layout.html'}}
+
+{{for i in info1:}}
+    <h3>{{=i.academic_qualification}}</h3>
+    <h3>{{=i.student_name}}</h3>
+    {{s=i.profile_picture}}
+    <img src="{{=URL('download',args=s)}}" height="300" width="400"/>
+    <br>
+{{pass}}
+{{=email1}}
+
+{{=y}}

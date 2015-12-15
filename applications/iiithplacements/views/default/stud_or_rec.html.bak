@@ -1,0 +1,16 @@
+{{extend 'layout.html'}}
+
+<h4>
+    Be Genuine
+    <br>
+    <br>
+    You are :
+</h4>
+
+<form action="{{=URL('stud_or_rec')}}">
+    <input type="radio" name="hello" value="Students">Student<br>
+    <br>
+    <input type="radio" name="hello" value="Recruiters">Recruiter<br>
+    <br>
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,86 @@
+<link href="{{=URL('static','css/div.css')}}" rel="stylesheet" type="text/css">
+
+<div style="height:330px;width:1536px;background-color:#151515">
+    <table>
+        <tr>
+            <td><img src="/iiithplacements/static/images/image9.jpg" alt="Image not available" height="440" width="490"></td>
+            <td><img src="/iiithplacements/static/images/image6.gif" alt="Image not available" height="500" width="530"></td>
+            <td><img src="/iiithplacements/static/images/image10.jpg" alt="Image not available" height="400" width="490"></td>
+        </tr>
+    </table>
+</div>
+
+
+
+{{extend 'layout.html'}}
+
+<link href="{{=URL('static','css/index.css')}}" rel="stylesheet" type="text/css">
+<link href="{{=URL('static','css/images.css')}}" rel="stylesheet" type="text/css">
+<script src="/iiithplacements/static/js/images.js" type="text/javascript"></script>
+
+<div id="sliderFrame">
+    <div id="slider">
+        <img src="/iiithplacements/static/images/image.png" alt="" >
+        <img src="/iiithplacements/static/images/image1.jpg" alt="" >
+        <img src="/iiithplacements/static/images/image2.png" alt="" >
+        <img src="/iiithplacements/static/images/image3.jpg" alt="" >
+    </div>
+     <div class="group1-Wrapper">
+            <a onclick="imageSlider.previous()" class="group1-Prev"></a>
+            <a onclick="imageSlider.next()" class="group1-Next"></a>
+        </div>
+        <!--nav bar-->
+        <div style="text-align:center;padding:20px;z-index:20;">
+            <a onclick="imageSlider.previous()" class="group2-Prev"></a>
+            <a id='auto' onclick="switchAutoAdvance()"></a>
+            <a onclick="imageSlider.next()" class="group2-Next"></a>
+        </div>
+</div>
+
+<script type="text/javascript">
+        function switchAutoAdvance() {
+            imageSlider.switchAuto();
+            switchPlayPauseClass();
+        }
+        function switchPlayPauseClass() {
+            var auto = document.getElementById('auto');
+            var isAutoPlay = imageSlider.getAuto();
+            auto.className = isAutoPlay ? "group2-Pause" : "group2-Play";
+            auto.title = isAutoPlay ? "Pause" : "Play";
+        }
+        switchPlayPauseClass();
+    </script>
+
+
+<br>
+
+<h1>
+    WHY IIIT - H ?
+</h1>
+
+<h3>
+    Listed below are some of the singular capabilities of our students:
+</h3>
+
+<ul style="font-size:20px">
+    <li>Students undergo thorough training in the theoretical and practical aspects of various areas of computer science and information technology, and acquire proficiency in a wide range of the latest software and hardware technologies. </li>
+   <br>
+    <li>Students of every successive batch have won accolades at a host of national and international level programming contests, proving that they rank among the best in the country.</li>
+    <br>
+    <li>As part of academic projects, some students developed breakthrough technologies such as text to speech engine, data cube support for MySQL, PDA applications for rural use, etc. Many applications designed and developed by students are under implementation at various departments and research centers of the institute.</li>
+    <br>
+    <li>IIIT, Hyderabad is probably the only institute in the country to have a strong research component built into the undergraduate curricula. As a result, students here do the largest number of research projects, and thus bring to employers deep research orientation and innovative mindset.</li>
+    <br>
+    <li> IIIT, Hyderabad is one of the few engineering schools in the country to have a large number of R&D collaborations with the domestic industry, and most research linkages with the leading technology universities overseas. </li>
+    <br>
+    <li>The faculty and students at IIIT, Hyderabad publish probably the largest number of research papers in the IT, computer science and related areas, in the country, each year.</li>
+    <br>
+    <li>Many of our students, despite being offered admission at IIT(s), preferred to study at IIIT-H, keeping in view the overwhelming benefits of studying here: access to world class research faculty and abundance of research opportunities at the undergraduate level too, which is uncommon even at some of the most prestigious technology institutes in the country.</li>
+    <br>
+    <li> There are a host of companies that conducted a realistic analysis of the institute’s unique research capabilities and placed students from the institute a notch above those of IITs. </li>
+</ul>
+<br>
+<p style="font-size:20px">
+
+These companies straight away offer our students the much coveted R&D jobs soon after they join, while such positions are earned by proven performance after the mandatory one-or-two-year probationary period of work for students of other prestigious technology institutes in the country. This is a testimony to the research orientation and research abilities of our students.
+</p>

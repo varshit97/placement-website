@@ -1,0 +1,31 @@
+<link href="{{=URL('static','css/div.css')}}" rel="stylesheet" type="text/css">
+
+<div style="height:330px;width:1536px;background-color:#151515">
+    <table>
+        <tr>
+            <td><img src="/iiithplacements/static/images/image9.jpg" alt="Image not available" height="440" width="490"></td>
+            <td><img src="/iiithplacements/static/images/image6.gif" alt="Image not available" height="500" width="530"></td>
+            <td><img src="/iiithplacements/static/images/image10.jpg" alt="Image not available" height="400" width="490"></td>
+        </tr>
+    </table>
+</div>
+
+
+{{extend 'layout.html'}}
+
+
+{{for i in table:}}
+    {{if name.lower()==i.name_of_student.lower():}}
+        <font size="4"><font size="5">Name of student : </font>{{=i.name_of_student}}</font>
+        <br>
+        <br>
+        <font size="4"><font size="5">Messaged by : </font>{{=i.messaged_by}}</font>
+        <br>
+        <br>
+        <font size="4"><font size="5">Message : </font>{{=i.message_is}}</font>
+        <br>
+        <br>
+        <h4>------------------------------------------------------------------------------------------------------------------------------------</h4>
+        <br>
+    {{pass}}
+{{pass}}

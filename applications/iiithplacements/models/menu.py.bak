@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+
+response.logo = A(B('IIIT - H'),XML('&trade;&nbsp;'),
+                  _class="brand",_href="http://iiit.ac.in")
+response.title = request.application.replace('_',' ').title()
+response.subtitle = ''
+
+## read more at http://dev.w3.org/html5/markup/meta.name.html
+response.meta.author = 'Your Name <you@example.com>'
+response.meta.keywords = 'web2py, python, framework'
+response.meta.generator = 'Web2py Web Framework'
+
+## your http://google.com/analytics id
+response.google_analytics_id = None
+
+#########################################################################
+## this is the main application menu add/remove items as required
+#########################################################################
+
+response.menu = [
+    (T('Home'), False, URL('default', 'index'), []),
+    (T('Why IIIT-H'), False, URL('default', 'why'), []),
+    (T('Past Recruiters'), False, URL('default', 'recruiters'), []),
+    (T('Placement Info.'), False, URL('default', 'info'), []),
+    (T('Departments'), False, URL('default', 'departments'), []),
+    (T('Contact Us'), False, URL('default', 'contactus'), []),
+    (T('Register Yourself'), False, URL('default', 'registration1'), [])
+]
+
+#(T('IIIT\'s Booklet'), False, URL('default', 'booklet'), []),
+
+if auth.has_membership('Students'):
+    response.menu.remove((T('Register Yourself'), False, URL('default', 'registration1'), []))
+    response.menu.append((T('Companies'), False, URL('default', 'company'), []))
+    response.menu.append((T('Profile'), False, URL('default', ''),[(T('View Profile'), False, URL('default', 'profile1')),(T('Update Profile'), False, URL('default', 'update_profile'))]))
+    response.menu.append((T('Messages'), False, URL('default', ''), [(T('Outbox'), False, URL('default', 'message_to_student'), []),(T('Inbox'), False, URL('default', 'show_messages'), [])]))
+
+elif auth.has_membership('Recruiters'):
+    response.menu.remove((T('Register Yourself'), False, URL('default', 'registration1'), []))
+    response.menu.append((T('Profiles'), False, URL('default', ''), [(T('View all Profiles'), False, URL('default', 'recruiterlogin1')),(T('View Profile'), False, URL('default', 'recruiters2'), [])]))
+    response.menu.append((T('Messages'), False, URL('default', ''), [(T('Inbox'), False, URL('default', 'show_messages'), []),(T('Outbox'), False, URL('default', 'message_to_student'), [])]))
+
+DEVELOPMENT_MENU = True
+
+def _():
+    app = request.application
+    ctr = request.controller
+
+if DEVELOPMENT_MENU: _()
+
+if "auth" in locals(): auth.wikimenu()
