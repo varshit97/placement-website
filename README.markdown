@@ -15,16 +15,6 @@ Learn more at http://web2py.com
     
 Then edit ./app.yaml and replace "yourappname" with yourappname.
 
-## Documentation (readthedocs.org)
-
-[![Docs Status](https://readthedocs.org/projects/web2py/badge/?version=latest&style=flat-square)](http://web2py.rtfd.org/)
-
-## Tests
-
-[![Build Status](https://img.shields.io/travis/web2py/web2py.svg?style=flat-square)](https://travis-ci.org/web2py/web2py)
-
-[![Coverage Status](https://img.shields.io/coveralls/web2py/web2py.svg?style=flat-square)](https://coveralls.io/r/web2py/web2py)
-
 ## Installation Instructions
 
 To start web2py there is NO NEED to install it. Just unzip and do:
